@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import useLogin from '../hooks/useLogin.js';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const LoginPageStyles = {
@@ -66,6 +67,9 @@ const LoginPage = () => {
       <button onClick={handleSubmit} style={buttonStyles}>
         Login
       </button>
+      <Link to={'/signup'}>
+      <span style={{ marginLeft: '10px' }}>Don't have an account? Sign up</span>
+      </Link>
     </div>
   );
 };
