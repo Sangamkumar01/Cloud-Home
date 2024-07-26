@@ -14,7 +14,7 @@ const AppRouter = () => {
     const router = createBrowserRouter([
         {
             path: "/login",
-            element:<LoginPage />,
+            element: isAuthorized ? <Navigate to="/" /> : <LoginPage />,
         },
         {
             path: "/signup",
