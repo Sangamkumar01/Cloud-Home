@@ -4,7 +4,8 @@
   "description": "npm i react react-dom react-router-dom axios cloudinary @reduxjs/toolkit react-redux parcel",
   "main": "app.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "npm install"
   },
   "author": "",
   "license": "ISC",
