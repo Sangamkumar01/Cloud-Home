@@ -2,10 +2,9 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "npm i react react-dom react-router-dom axios cloudinary @reduxjs/toolkit react-redux parcel",
-  "main": "app.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html  --dist-dir dist"
+    "build": "parcel build index.html --dist-dir dist"
   },
   "author": "",
   "license": "ISC",
