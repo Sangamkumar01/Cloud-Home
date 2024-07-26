@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { appLogout } from "../store/slices/authSlice";
+import { BACKEND_URL } from "../constant";
 
 const useGenerateNewOtp = () => {
     const { token } = useSelector((e) => e.auth);
@@ -7,7 +8,7 @@ const useGenerateNewOtp = () => {
 
     const generateNewOtp = async () => {
         try {
-            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/otp/generate`, {
+            const res = await fetch(`${BACKEND_URL}/api/v1/otp/generate`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

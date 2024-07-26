@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux";
+import { BACKEND_URL } from "../constant";
+
 
 const useCreateFolder = () => {
     const { token } = useSelector((e) => e.auth);
 
     const createFolder = async ({ name, parentId }) => {
         try {
-            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/folder/create`, {
+            const res = await fetch(`${BACKEND_URL}/api/v1/folder/create`, {
                 method: "POST",
                 body: JSON.stringify({
                     name,

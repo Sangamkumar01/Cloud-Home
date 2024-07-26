@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "../constant";
 
 const useSignup = () => {
     const navigate = useNavigate();
 
     const signup = async ({ email, password }) => {
         try {
-            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/auth/signup`, {
+            const res = await fetch(`${BACKEND_URL}/api/v1/auth/signup`, {
                 method: "POST",
                 body: JSON.stringify({ email, password }),
                 headers: {

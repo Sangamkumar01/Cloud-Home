@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { appLogout, emailVerified } from "../store/slices/authSlice";
+import { BACKEND_URL } from "../constant";
 
 const useVerifyOtp = () => {
     const { token } = useSelector((e) => e.auth);
@@ -7,7 +8,7 @@ const useVerifyOtp = () => {
 
     const verifyOtp = async (otp) => {
         try {
-            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/otp/verify`, {
+            const res = await fetch(`${BACKEND_URL}/api/v1/otp/verify`, {
                 method: "POST",
                 body: JSON.stringify({ otp }),
                 headers: {

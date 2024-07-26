@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { BACKEND_URL } from "../constant";
 
 const useUploadFile = () => {
     const { token } = useSelector((e) => e.auth);
@@ -12,7 +13,7 @@ const useUploadFile = () => {
             formData.append("file", file);
             formData.append("parentId", parentId);
 
-            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/file`, {
+            const res = await fetch(`${BACKEND_URL}/api/v1/file`, {
                 method: "POST",
                 body: formData,
                 headers: {
