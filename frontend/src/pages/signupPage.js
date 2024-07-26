@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useSignup from '../hooks/useSignup.js';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignupPage = () => {
   const navigate = useNavigate();
@@ -75,6 +75,10 @@ const SignupPage = () => {
       <button onClick={handleSubmit} style={buttonStyles}>
         Sign Up
       </button>
+
+      <Link to={'/login'}>
+      <span style={{ marginLeft: '10px' }}>Already have an account? Sign In</span>
+      </Link>
     </div>
   );
 };
