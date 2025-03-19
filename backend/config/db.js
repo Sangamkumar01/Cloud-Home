@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 
-const uri = "mongodb+srv://sangam:<db_password>@gofoodmern.00npwb5.mongodb.net/?retryWrites=true&w=majority&appName=GoFoodMern";
+const uri = const uri = process.env.DB_URI;;
 
 
-let dbURL = uri.replace("<username>", process.env.DB_USERNAME);
-    dbURL = dbURL.replace("<password>", process.env.DB_PASSWORD);
-    dbURL = dbURL.replace("<dbName>", process.env.DB_NAME);
+// let dbURL = uri.replace("<username>", process.env.DB_USERNAME);
+//     dbURL = dbURL.replace("<password>", process.env.DB_PASSWORD);
+//     dbURL = dbURL.replace("<dbName>", process.env.DB_NAME);
 
 
 mongoose
-    .connect(dbURL)
+    .connect(uri)
     .then(() =>{
     console.log("--------DB Connected------");
 })
