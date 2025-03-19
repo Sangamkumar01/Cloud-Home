@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const uri = "mongodb+srv://<username>:<password>@gofoodmern.00npwb5.mongodb.net/<dbName>?retryWrites=true&w=majority&appName=GoFoodMern";
+const uri = "mongodb+srv://sangam:<db_password>@gofoodmern.00npwb5.mongodb.net/?retryWrites=true&w=majority&appName=GoFoodMern";
 
 
 let dbURL = uri.replace("<username>", process.env.DB_USERNAME);
