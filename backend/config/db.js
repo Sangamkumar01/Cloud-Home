@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const uri = const uri = process.env.DB_URI;;
+const uri = process.env.DB_URI;;
 
 
 // let dbURL = uri.replace("<username>", process.env.DB_USERNAME);
